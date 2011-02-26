@@ -1,0 +1,9 @@
+<h1><%= @category.title %></h1>
+
+<% @images.each do |image| -%>
+  <div class="gall_image">
+    <h3><%= image.title %></h3>
+    <p><%= image.description %></p>
+    <p><strong><%= image.url %></strong></p>
+  </div>
+<% end -%>

@@ -1,0 +1,5 @@
+<li><%= link_to_unless_current 'Home',    :controller => '/main', :action => 'index' %></li>
+<li><%= link_to_unless_current 'About',   :controller => '/main', :action => 'about' %></li>
+<li><%= link_to_unless_current 'Gallery', :controller => '/gallery', :action => 'index' %></li>
+<li><%= link_to_unless_current 'Shop',    :controller => '/shop' %></li>
+<li class="last"><%= link_to_unless_current 'Contact', :controller => '/main', :action => 'contact' %></li>

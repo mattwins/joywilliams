@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Gallery: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold', 'style' %>
+</head>
+<body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
+  <div id="wrapper">
+    <!-- Header starts here -->
+    <div id="menu">
+    	<ul id="navigation">
+      	<%= render :partial => '/layouts/shared/nav_items' %>
+    	</ul>
+    </div>
+    <%= link_to %{<h1 id="logo">Joy Williams<span>Fashion Designer</span></h1>}, :controller => '/main', :action => 'index' %>
+    <!-- Header ends here -->
+    <div class="clear"></div>
+	  <p style="color: green"><%= flash[:notice] %></p>
+    <%= yield %>
+    
+    <div id="footer">
+  	  <p>&copy; Copyright 2010 Joy Williams. All Rights Reserved.</p>
+  	</div>
+  </div>
+</body>
+</html>

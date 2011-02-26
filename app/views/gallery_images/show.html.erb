@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @gallery_image.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @gallery_image.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @gallery_image.url %>
+</p>
+
+<p>
+  <b>Visbale:</b>
+  <%=h @gallery_image.visible %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%=h @gallery_image.gallery_category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_gallery_image_path(@gallery_image) %> |
+<%= link_to 'Back', gallery_images_path %>

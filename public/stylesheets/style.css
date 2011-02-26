@@ -1,0 +1,327 @@
+/* ----------------------------
+simple reset
+---------------------------- */
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body, ul, ol, li, form, fieldset, legend
+{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
+
+fieldset,img { border: 0; }
+
+legend { color: #000; }
+
+li { list-style: none; }
+
+sup { vertical-align: text-top; }
+
+sub { vertical-align: text-bottom; }
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin : 25px 0 25px 0;
+}
+
+
+caption, th, td
+{
+	text-align: left;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+table th {
+	font-size : 16px;
+	padding : 8px 5px 8px 5px;
+	border-bottom : 2px solid #ccc;
+	font-weight : bold;
+}
+
+table td {
+	border-top : 1px dotted #ccc;
+	padding : 8px 5px 15px 5px;
+	font-size : 12px;
+}
+
+table tr.alt td {
+	background : #f3f3f3;
+}
+
+
+
+input, textarea, select
+{
+	font-size: 110%;
+	line-height: 1.1;
+}
+
+abbr, acronym
+{
+	border-bottom: .1em dotted;
+	cursor: help;
+}
+
+/* ----- BASIC ----- */
+
+
+html, body {
+height: 100%;
+font-family: "Lucida Grande", "Helvetica Neue", Helvetica, Arial;
+
+}
+a{color:#434343; text-decoration: none;}
+p{color:#434343;font-size:13px;}
+
+body{
+	text-align : center;
+background:url(../images/body_bg.jpg) top center #eee;}
+/* ----- ID'S ----- */
+div#wrapper{width:900px;margin:0 auto;padding-top:25px;text-align:left;}
+
+#content{ margin-top:20px;}
+
+/* ----- CONTACT/MENU ----- */
+div#menu{
+float:right;
+
+}
+
+ul#navigation {
+float:right;
+margin-right:22px;
+margin-top:10px;}
+
+ul#navigation li{
+float:left;
+margin-right:23px}
+
+
+ul#navigation li a{
+text-transform:uppercase;
+color: #1f1e1e;
+text-decoration: none;
+font-size: 15px;
+text-shadow: #fff 1px -1px 2px;
+}
+
+ul#navigation li a:hover, ul#navigation li a.active, .highlight{
+	background : none;
+color:#d80000 !important;
+}
+
+ul#contact{
+background:none;
+list-style:none;
+width: 390px;
+height:38px;
+margin-right:8px;
+margin-top:14px;
+}
+
+ul#contact li{
+float:left;
+margin-right:10px;
+padding-left:34px;
+text-transform: uppercase;
+color:#333131;
+font-size: 16px;
+padding-bottom:2px;}
+
+
+/* ----- CLASSES ----- */
+
+.clear{
+clear: both;
+display: block;
+height: 0px;
+overflow: hidden;
+visibility: hidden;
+width: 0px;}
+
+
+.thumbframe {
+  background: url(../images/project_bg.png) no-repeat top left;  
+    height:270px;
+    width:251px;
+    display:block;
+padding:16px;
+padding-bottom:5px;
+float:left;
+margin-right:25px;
+margin-bottom:23px;
+
+
+}
+
+.last {
+	margin-right : 0 !important;
+}
+
+.nobg {
+	background : none !important;
+	padding : 0 20px 0 20px !important;
+	width : 243px;
+	
+}
+
+.thumbframe h3 {
+	font-size : 22px;
+	line-height : 26px;
+}
+
+.thumbframe p{
+
+padding-top:5px;}
+
+
+/* ----- HEADINGS ----- */
+
+h1#logo{
+background:url("../images/h1.png") no-repeat scroll left top transparent;
+height:87px;
+width:248px;
+margin-bottom:10px;
+margin-left:20px;
+margin-top : -5px;
+float:left;
+text-indent:-9999px;}
+
+#wrapper h1,
+h2{
+color:#333131;
+font-size:21px;
+font-weight:normal;
+margin-bottom:15px;
+text-decoration:none;
+text-transform:uppercase;
+padding-left:5px;
+}
+
+#impact_banner {
+	background : url(/images/border-bottom.png) left bottom no-repeat;
+	clear : both;
+	padding : 10px 15px 45px 15px;
+	height : 255px;
+	position : relative;
+	top : -10px;
+}
+
+#impact_image {
+	position : absolute;
+	right : -30px;
+	top : -48px;
+}
+
+#impact_banner h2 {
+	font-size : 36px;
+	line-height : 44px;
+	text-transform : none;
+	width : 480px;
+	text-shadow: #fff 1px -1px 2px;
+}
+
+h3{ 
+color:#434343;
+font-size:14px;
+font-weight: normal;
+
+margin-bottom:15px;
+}
+h4{
+}
+
+/* ----- LISTS ----- */
+
+
+li p{
+}
+ol{
+}
+ul{
+}
+ol li{
+}
+ul li{
+}
+
+/* ----- IMAGES ----- */
+
+img{
+}
+img a{
+}
+img a:hover{
+}
+
+/* ----- LINKS ----- */
+
+a{
+}
+a:hover{
+}
+a:visited, a:active, a:focus{
+}
+a:visited{
+}
+a:active{
+}
+a:focus{
+}
+
+/* ----- FORMS ----- */
+
+form{
+}
+fieldset{
+}
+legend{
+}
+label{
+}
+input{
+}
+textarea{
+}
+input, textarea{
+}
+select{
+}
+optgroup{
+}
+option{
+}
+
+i {
+  font-family : "Times New Roman", Georgia;
+  font-size : 28px;
+}
+
+#thumb_second,
+#thumb_first {
+	border-right : 2px solid #fff;
+	width : 242px;
+}
+
+#thumb_second {
+	padding-left : 10px !important;
+}
+
+#footer {
+	clear : both;
+	border-top : 1px solid #ccc;
+	padding-top : 15px;
+	margin-bottom : 25px;
+}
+
+#footer p {
+	color : #999;
+	font-size : 11px;
+}

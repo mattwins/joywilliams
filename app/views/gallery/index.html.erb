@@ -1,0 +1,8 @@
+<h1>Gallery List</h1>
+
+<% @categories.each do |category| -%>
+  <div class="cat">
+    <h3><%= link_to category.title, gallery_path(category) %></h3>
+    <p><%= category.description %></p>
+  </div>
+<% end -%>
