@@ -4,6 +4,6 @@
   <div class="gall_image">
     <h3><%= image.title %></h3>
     <p><%= image.description %></p>
-    <p><strong><%= image.url %></strong></p>
+    <%= image_tag image.photo.url(:thumb) %>
   </div>
 <% end -%>

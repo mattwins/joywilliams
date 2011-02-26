@@ -1,6 +1,6 @@
 <h1>New Gallery Image</h1>
 
-<% form_for(@gallery_image) do |f| %>
+<% form_for @gallery_image, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -12,8 +12,8 @@
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
   </p>
   <p>
     <%= f.label :visible %><br />

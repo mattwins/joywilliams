@@ -4,7 +4,6 @@
   <tr>
     <th>Title</th>
     <th>Description</th>
-    <th>Url</th>
     <th>Visible</th>
     <th>Category</th>
   </tr>
@@ -13,7 +12,6 @@
   <tr class="<%= cycle('','alt')%>">
     <td><%=h gallery_image.title %></td>
     <td><%= gallery_image.description %></td>
-    <td><%=h gallery_image.url %></td>
     <td><%=h gallery_image.visible %></td>
     <td><%=h gallery_image.gallery_category_id %></td>
     <td><%= link_to 'Show', gallery_image %></td>
