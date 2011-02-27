@@ -45,16 +45,16 @@ class GalleryImagesController < ApplicationController
   def create
     @gallery_image = GalleryImage.new(params[:gallery_image])
 
-    respond_to do |format|
       if @gallery_image.save
-        flash[:notice] = 'GalleryImage was successfully created.'
-        format.html { redirect_to(@gallery_image) }
-        format.xml  { render :xml => @gallery_image, :status => :created, :location => @gallery_image }
+          flash[:notice] = 'GalleryImage was successfully created.'
+        if params[:gallery_image][:photo].blank?
+          redirect_to(@gallery_image)
+        else
+          render :action => 'cropping'
+        end
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @gallery_image.errors, :status => :unprocessable_entity }
+        render :action => "new"
       end
-    end
   end
 
   # PUT /gallery_images/1

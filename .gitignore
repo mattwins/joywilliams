@@ -1,2 +1,5 @@
 tmp
 public/system
+.DS_Store
+db/schema.rb
+log/development.log

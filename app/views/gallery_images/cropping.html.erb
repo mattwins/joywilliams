@@ -1,0 +1,49 @@
+<% content_for :headers do %>
+<%= javascript_include_tag 'jquery.Jcrop.min' %>
+<%= stylesheet_link_tag 'jquery.Jcrop' %>
+<script language="Javascript">
+
+function showPreview(coords)
+{
+	var rx = <%= GalleryImage::PHOTO_SW %> / coords.w;
+	var ry = <%= GalleryImage::PHOTO_SH %> / coords.h;
+	var ratio = <%= @gallery_image.photo_geometry(:original).width %> / <%= @gallery_image.photo_geometry(:medium).width %>; 
+
+	$('#preview').css({
+		width: Math.round(rx * <%= @gallery_image.photo_geometry(:medium).width.to_i %>) + 'px',
+		height: Math.round(ry * <%= @gallery_image.photo_geometry(:medium).height.to_i %>) + 'px',
+		marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+		marginTop: '-' + Math.round(ry * coords.y) + 'px'
+	});
+  $('#crop_x').val(Math.round(coords.x * ratio));
+  $('#crop_y').val(Math.round(coords.y * ratio));
+  $('#crop_w').val(Math.round(coords.w * ratio));
+  $('#crop_h').val(Math.round(coords.h * ratio));
+}
+
+$(function() {
+  $('#cropbox').Jcrop({
+      onSelect: showPreview,
+      onChange: showPreview,
+      setSelect:   [ 0, 0, 240, 240 ],
+      aspectRatio: <%= GalleryImage::PHOTO_SW %>/<%= GalleryImage::PHOTO_SH %>
+    });
+});
+
+</script>
+<% end %>
+
+
+<h1>Create a thumbnail for the gallery</1>
+  <%= image_tag @gallery_image.photo.url(:medium), :id => 'cropbox' %>
+<div style="width:<%= GalleryImage::PHOTO_SW %>px;height:<%= GalleryImage::PHOTO_SH %>px;overflow:hidden">
+  <%= image_tag @gallery_image.photo.url(:medium), :id => 'preview' %>
+</div>
+
+<% form_for @gallery_image do |f| %>
+  <%= f.text_field :crop_x, :id => 'crop_x' %><br />
+  <%= f.text_field :crop_y, :id => 'crop_y' %><br />
+  <%= f.text_field :crop_w, :id => 'crop_w' %><br />
+  <%= f.text_field :crop_h, :id => 'crop_h' %><br />
+  <%= f.submit "Crop!" %>
+<% end %>
